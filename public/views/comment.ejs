@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>评论</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<meta autor="wpzheng" />
+<link href="" rel="stylesheet">
+</head>
+<body>
+		<% include header %>
+    <div class="content">
+    	<ul>
+    		<% for(var i=0;i<commentData.data.length;i++){ %>
+    		<li>
+					<h3><%=commentData.data[i].time%></h3>
+    			<a href="#"><%=commentData.data[i].username%></a>
+    			<p><%=commentData.data[i].content%></p>
+    		</li>
+				<%}%>
+    	</ul>
+    </div>
+    <% include footer %>
+</body>
+</html>
